@@ -14,6 +14,7 @@ import './App.css';
 function App() {
   return (
     <>
+    <div className='parallax-container-home'>
       <main className='p-4 m-0 w-full'>
         <h1 className="text-4xl text-white text-center underline font-extrabold">All 4 One - Rubik's Cube Themed!</h1>
 
@@ -41,6 +42,7 @@ function App() {
         
         <p className="text-center text-white text-4xl font-semibold pb-12">Extra Color Challenge</p>
       </main>
+      </div>
     </>
   );
 }

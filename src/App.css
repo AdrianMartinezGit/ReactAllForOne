@@ -1,18 +1,18 @@
-body {
-    background-image: url('./assets/backgrounds/loop_background_01_grey.webp');
-    background-color: #161616;
-    animation: scrolling 15s linear infinite;
-}  
+.img-button:hover {
+    cursor: pointer;
+}
 
-@keyframes scrolling {
+.parallax-container-home {
+    background-image: url("./assets/backgrounds/loop_background_01_grey.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+}
+  
+@keyframes cube-scrolling {
     from {
         background-position: 0 0;
     }
     to {
         background-position: 768px -768px;
     }
-}
-
-.img-button:hover {
-    cursor: pointer;
 }
