@@ -6,6 +6,8 @@ import nextButton from '../assets/buttons/button_next.webp'
 import homeButton from '../assets/buttons/button_home.webp'
 import prevButton from '../assets/buttons/button_prev.webp'
 
+import { ReverseNumFetch } from '../services/DataService.js'
+
 export default function PageSevenComponent() {
   return (
     <div className='parallax-container-seven'>

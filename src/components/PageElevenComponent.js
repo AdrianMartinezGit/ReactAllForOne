@@ -6,6 +6,8 @@ import nextButton from '../assets/buttons/button_next.webp'
 import homeButton from '../assets/buttons/button_home.webp'
 import prevButton from '../assets/buttons/button_prev.webp'
 
+import { NameGreetingFetch } from '../services/DataService.js'
+
 export default function PageElevenComponent() {
   return (
     <div className='parallax-container-eleven'>
