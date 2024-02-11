@@ -8,7 +8,67 @@
     animation: cube-scrolling 15s linear infinite;
     height: 100%;
 }
-  
+.parallax-container-two {
+    background-image: url("./assets/backgrounds/loop_background_02_red.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}
+.parallax-container-three {
+    background-image: url("./assets/backgrounds/loop_background_03_orange.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}
+.parallax-container-four {
+    background-image: url("./assets/backgrounds/loop_background_04_yellow.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}
+.parallax-container-five {
+    background-image: url("./assets/backgrounds/loop_background_05_green.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}
+.parallax-container-six {
+    background-image: url("./assets/backgrounds/loop_background_06_cyan.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}
+.parallax-container-seven {
+    background-image: url("./assets/backgrounds/loop_background_07_aqua.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}
+.parallax-container-eight {
+    background-image: url("./assets/backgrounds/loop_background_08_blue.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}
+.parallax-container-nine {
+    background-image: url("./assets/backgrounds/loop_background_09_purple.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}
+.parallax-container-ten {
+    background-image: url("./assets/backgrounds/loop_background_10_pink.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}
+.parallax-container-eleven {
+    background-image: url("./assets/backgrounds/loop_background_11_white.webp");
+    background-attachment: fixed;
+    animation: cube-scrolling 15s linear infinite;
+    height: 100%;
+}  
+
 @keyframes cube-scrolling {
     from {
         background-position: 0 0;
