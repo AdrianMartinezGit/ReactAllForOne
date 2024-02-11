@@ -6,6 +6,7 @@
     background-image: url("./assets/backgrounds/loop_background_01_grey.webp");
     background-attachment: fixed;
     animation: cube-scrolling 15s linear infinite;
+    height: 100%;
 }
   
 @keyframes cube-scrolling {
