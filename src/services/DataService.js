@@ -27,8 +27,8 @@ const compareNumberFetch = async (num1, num2) => {
 	return data;
 }
 
-const MadLibFetch = async () => {
-    const promise = await fetch(`https://allfourone.azurewebsites.net/MadLib/CreateStory/${fieldOne.value}/${fieldTwo.value}/${fieldThree.value}/${fieldFour.value}/${fieldFive.value}/${fieldSix.value}/${fieldSeven.value}/${fieldEight.value}/${fieldNine.value}/${fieldTen.value}`);
+const MadLibFetch = async (field1, field2, field3, field4, field5, field6, field7, field8, field9, field10) => {
+    const promise = await fetch(`https://allfourone.azurewebsites.net/MadLib/CreateStory/${field1}/${field2}/${field3}/${field4}/${field5}/${field6}/${field7}/${field8}/${field9}/${field10}`);
     const data = await promise.text();
 
 	return data;
