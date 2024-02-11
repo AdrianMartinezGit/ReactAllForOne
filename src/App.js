@@ -1,13 +1,13 @@
-import aquaCube from './assets/cube/cube_aqua.png'
-import blueCube from './assets/cube/cube_blue.png'
-import cyanCube from './assets/cube/cube_cyan.png'
-import greenCube from './assets/cube/cube_green.png'
-import orangeCube from './assets/cube/cube_orange.png'
-import pinkCube from './assets/cube/cube_pink.png'
-import purpleCube from './assets/cube/cube_purple.png'
-import redCube from './assets/cube/cube_red.png'
-import whiteCube from './assets/cube/cube_white.png'
-import yellowCube from './assets/cube/cube_yellow.png'
+import aquaCube from './assets/cube/cube_aqua.webp'
+import blueCube from './assets/cube/cube_blue.webp'
+import cyanCube from './assets/cube/cube_cyan.webp'
+import greenCube from './assets/cube/cube_green.webp'
+import orangeCube from './assets/cube/cube_orange.webp'
+import pinkCube from './assets/cube/cube_pink.webp'
+import purpleCube from './assets/cube/cube_purple.webp'
+import redCube from './assets/cube/cube_red.webp'
+import whiteCube from './assets/cube/cube_white.webp'
+import yellowCube from './assets/cube/cube_yellow.webp'
 
 import './App.css';
 
