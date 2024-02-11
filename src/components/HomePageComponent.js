@@ -11,11 +11,8 @@ import redCube from '../assets/cube/cube_red.webp'
 import whiteCube from '../assets/cube/cube_white.webp'
 import yellowCube from '../assets/cube/cube_yellow.webp'
 
-import nextButton from '../assets/buttons/button_next.webp'
-import homeButton from '../assets/buttons/button_home.webp'
-import prevButton from '../assets/buttons/button_prev.webp'
-
-import '../App.css';
+import '../App.css'
+import { Link } from 'react-router-dom'
 
 export default function HomePageComponent() {
   return (
@@ -26,15 +23,15 @@ export default function HomePageComponent() {
         <div className="flex items-center justify-center pt-6 pb-12">
           <div className='bg-white p-1 rounded-2xl'>
             <div className='grid grid-cols-3 grid-rows-3 gap-1 bg-black p-2 rounded-2xl'>
-              <img src={redCube} alt='redCube' className='img-button'/>
-              <img src={orangeCube} alt='orangeCube' className='img-button'/>
-              <img src={yellowCube} alt='yellowCube' className='img-button'/>
-              <img src={greenCube} alt='greenCube' className='img-button'/>
-              <img src={cyanCube} alt='cyanCube' className='img-button'/>
-              <img src={aquaCube} alt='aquaCube' className='img-button'/>
-              <img src={blueCube} alt='blueCube' className='img-button'/>
-              <img src={purpleCube} alt='purpleCube' className='img-button'/>
-              <img src={pinkCube} alt='pinkCube' className='img-button'/>
+              <Link to={'pageTwo'}><img src={redCube} alt='redCube' className='img-button'/></Link>
+              <Link to={'pageThree'}><img src={orangeCube} alt='orangeCube' className='img-button'/></Link>
+              <Link to={'pageFour'}><img src={yellowCube} alt='yellowCube' className='img-button'/></Link>
+              <Link to={'pageFive'}><img src={greenCube} alt='greenCube' className='img-button'/></Link>
+              <Link to={'pageSix'}><img src={cyanCube} alt='cyanCube' className='img-button'/></Link>
+              <Link to={'pageSeven'}><img src={aquaCube} alt='aquaCube' className='img-button'/></Link>
+              <Link to={'pageEight'}><img src={blueCube} alt='blueCube' className='img-button'/></Link>
+              <Link to={'pageNine'}><img src={purpleCube} alt='purpleCube' className='img-button'/></Link>
+              <Link to={'pageTen'}><img src={pinkCube} alt='pinkCube' className='img-button'/></Link>
             </div>
           </div>
         </div>
@@ -42,27 +39,11 @@ export default function HomePageComponent() {
         <p className="text-center text-white text-4xl md:text-6xl font-semibold">Choose a color challenge!</p>
         
         <div className="flex items-center justify-center pt-12 pb-6">
-          <input type="image" src={whiteCube} alt='whiteCube'/>
+            <Link to={'pageEleven'}><input type="image" src={whiteCube} alt='whiteCube'/></Link>
         </div>
         
         <p className="text-center text-white text-4xl md:text-5xl font-semibold pb-12">Extra Color Challenge</p>
-
-        <div className='flex justify-center items-end'>
-          <div className="grid grid-cols-3 gap-5">
-              <div>
-                  <input type="image" src={prevButton} className='w-16 min-[320px]:w-24 md:w-32' alt='prevbutton'/>
-              </div>
-
-              <div>
-                  <input type="image" src={homeButton} className='w-16 min-[320px]:w-24 md:w-32' alt='homebutton'/>
-              </div>
-              <div>
-                  <input type="image" src={nextButton} className='w-16 min-[320px]:w-24 md:w-32' alt='nextbutton'/>
-              </div>        
-          </div>
-        </div>
-
       </main>
-      </div>
+    </div>
   )
 }
