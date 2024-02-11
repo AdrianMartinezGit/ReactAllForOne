@@ -9,6 +9,10 @@ import redCube from './assets/cube/cube_red.webp'
 import whiteCube from './assets/cube/cube_white.webp'
 import yellowCube from './assets/cube/cube_yellow.webp'
 
+import nextButton from './assets/buttons/button_next.webp'
+import homeButton from './assets/buttons/button_home.webp'
+import prevButton from './assets/buttons/button_prev.webp'
+
 import './App.css';
 
 function App() {
@@ -41,6 +45,22 @@ function App() {
         </div>
         
         <p className="text-center text-white text-4xl md:text-5xl font-semibold pb-12">Extra Color Challenge</p>
+
+        <div className='flex justify-center items-end'>
+          <div className="grid grid-cols-3 gap-5">
+              <div>
+                  <input type="image" src={prevButton} className='w-16 min-[320px]:w-24 md:w-32' alt='prevbutton'/>
+              </div>
+
+              <div>
+                  <input type="image" src={homeButton} className='w-16 min-[320px]:w-24 md:w-32' alt='homebutton'/>
+              </div>
+              <div>
+                  <input type="image" src={nextButton} className='w-16 min-[320px]:w-24 md:w-32' alt='nextbutton'/>
+              </div>        
+          </div>
+        </div>
+
       </main>
       </div>
     </>
