@@ -11,12 +11,17 @@ import { EightBallFetch } from '../services/DataService.js'
 export default function PageNineComponent() {
   return (
     <div className='parallax-container-nine'>
-      <main className='p-8 m-0 w-full sm:p-9 md:p-16'>
-        <h1>Testing One Two Three!</h1>
-        <h1>Testing One Two Three!</h1>
-        <h1>Testing One Two Three!</h1>
-        <h1>Testing One Two Three!</h1>
-        <h1>Testing One Two Three!</h1>
+      <main className='p-8 m-0 w-full sm:p-9 md:py-16 md:px-64'>
+        <h1 className="text-4xl md:text-6xl text-white text-center underline font-extrabold pb-4 md:pb-6 text-shadow-sm">Magic 8 Ball</h1>
+
+        <div className='pt-8 pb-16'>
+          <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
+            <h1 className='text-5xl text-white text-left font-extrabold pb-4'>Ask a Question:</h1>
+            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter question here" required />
+            <p className='text-3xl text-white text-left font-semibold pt-4'>Response:</p>
+            <div className='flex justify-end'><button className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Ask</button></div>
+          </div>
+        </div>
 
         <div className='flex justify-center items-end'>
           <div className="grid grid-cols-3 gap-5">

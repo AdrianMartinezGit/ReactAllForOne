@@ -2,6 +2,14 @@
     cursor: pointer;
 }
 
+.section-class {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-sm {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.75);
+}
+
 .parallax-container-home {
     background-image: url("./assets/backgrounds/loop_background_01_grey.webp");
     background-attachment: fixed;

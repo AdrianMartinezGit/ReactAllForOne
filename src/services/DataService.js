@@ -89,3 +89,5 @@ const NameGreetingFetch = async (name) => {
 
 	return data;
 }
+
+export {addNumberFetch, questionOneFetch, questionTwoFetch, compareNumberFetch, MadLibFetch, OddEvenFetch, ReverseNumFetch, ReverseABCFetch, EightBallFetch, CategoryCountryFetch, CategoryFoodFetch, CategoryRatingFetch, NameGreetingFetch}
