@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import '../App.css'
 import { Link } from 'react-router-dom'
 
@@ -9,6 +9,22 @@ import prevButton from '../assets/buttons/button_prev.webp'
 import { questionOneFetch, questionTwoFetch } from '../services/DataService.js'
 
 export default function PageThreeComponent() {
+  const [questionOne, setQuestionOne] = useState('');
+  const [resultOne, setResultOne] = useState('');
+
+  const [questionTwo, setQuestionTwo] = useState('');
+  const [resultTwo, setResultTwo] = useState('');
+
+  const getResultOne = async () => {
+    const response = await questionOneFetch(questionOne);
+    setResultOne(response);
+  }
+
+  const getResultTwo = async () => {
+    const response = await questionTwoFetch(questionTwo);
+    setResultTwo(response);
+  }
+
   return (
     <div className='parallax-container-three'>
       <main className='p-8 m-0 w-full sm:p-9 md:py-16 md:px-64'>
@@ -17,16 +33,16 @@ export default function PageThreeComponent() {
         <div className='grid grid-rows-2 gap-16 pt-8 pb-8'>
           <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
             <h1 className='text-5xl text-white text-left font-extrabold pb-4'>Question #1:</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter question here" required/>
-            <p className='text-3xl text-white text-left font-semibold pt-4'>Response:</p>
-            <div className='flex justify-end'><button className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
+            <input type="text" id="addNumberOne" onChange={(e) => setQuestionOne(e.target.value)} className="rounded-lg text-black w-full" placeholder="Enter your name here" required/>
+            <p className='text-3xl text-white text-left font-semibold pt-4'>Response: {resultOne}</p>
+            <div className='flex justify-end'><button onClick={() => getResultOne()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
           </div>
 
           <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
             <h1 className='text-5xl text-white text-left font-extrabold pb-4'>Question #2:</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter question here" required/>
-            <p className='text-3xl text-white text-left font-semibold pt-4'>Response:</p>
-            <div className='flex justify-end'><button className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
+            <input type="text" id="addNumberOne" onChange={(e) => setQuestionTwo(e.target.value)} className="rounded-lg text-black w-full" placeholder="Enter the time you woke up at" required/>
+            <p className='text-3xl text-white text-left font-semibold pt-4'>Response: {resultTwo}</p>
+            <div className='flex justify-end'><button onClick={() => getResultTwo()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
           </div>
         </div>
 
