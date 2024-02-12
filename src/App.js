@@ -1,4 +1,5 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ReactDOM from "react-dom/client";
 
 import HomePageComponent from './components/HomePageComponent.js'
 import PageTwoComponent from './components/PageTwoComponent.js'
