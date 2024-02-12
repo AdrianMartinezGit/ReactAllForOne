@@ -9,17 +9,25 @@ import prevButton from '../assets/buttons/button_prev.webp'
 import { NameGreetingFetch } from '../services/DataService.js'
 
 export default function PageElevenComponent() {
+  const [input, setInputField] = useState('');
+  const [result, setResult] = useState('');
+
+  const getResult = async () => {
+    const response = await NameGreetingFetch(input);
+    setResult(response);
+  }
+
   return (
     <div className='parallax-container-eleven'>
-      <main className='p-8 m-0 w-full sm:p-9 md:py-16 md:px-64'>
+      <main className='p-8 m-0 w-full sm:p-9 md:py-16 md:px-18 lg:px-32 xl:px-64'>
         <h1 className="text-4xl md:text-6xl text-white text-center underline font-extrabold pb-4 md:pb-6 text-shadow-sm">Say Hello!</h1>
 
         <div className='pt-8 pb-16'>
           <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
-            <h1 className='text-5xl text-white text-left font-extrabold pb-4'>Enter your name:</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter name here" required />
-            <p className='text-3xl text-white text-left font-semibold pt-4'>Response:</p>
-            <div className='flex justify-end'><button className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
+            <h1 className='text-3xl sm:text-5xl text-white text-left font-extrabold pb-4'>Enter your name:</h1>
+            <input type="text" onChange={(e) => setInputField(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter name here" required />
+            <p className='text-1xl sm:text-3xl text-white text-left font-semibold pt-4'>Response: {result}</p>
+            <div className='flex justify-end'><button onClick={() => getResult()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
           </div>
         </div>
 

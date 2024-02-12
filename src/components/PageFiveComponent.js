@@ -9,46 +9,63 @@ import prevButton from '../assets/buttons/button_prev.webp'
 import { MadLibFetch } from '../services/DataService.js'
 
 export default function PageFiveComponent() {
+  const [fieldOne, setFieldOne] = useState('');
+  const [fieldTwo, setFieldTwo] = useState('');
+  const [fieldThree, setFieldThree] = useState('');
+  const [fieldFour, setFieldFour] = useState('');
+  const [fieldFive, setFieldFive] = useState('');
+  const [fieldSix, setFieldSix] = useState('');
+  const [fieldSeven, setFieldSeven] = useState('');
+  const [fieldEight, setFieldEight] = useState('');
+  const [fieldNine, setFieldNine] = useState('');
+  const [fieldTen, setFieldTen] = useState('');
+  const [result, setResult] = useState('');
+
+  const getResult = async () => {
+    const response = await MadLibFetch(fieldOne, fieldTwo, fieldThree, fieldFour, fieldFive, fieldSix, fieldSeven, fieldEight, fieldNine, fieldTen);
+    setResult(response);
+  }
+
   return (
     <div className='parallax-container-five'>
-      <main className='p-8 m-0 w-full sm:p-9 md:py-16 md:px-64'>
+      <main className='p-8 m-0 w-full sm:p-9 md:py-16 md:px-18 lg:px-32 xl:px-64'>
         <h1 className="text-4xl md:text-6xl text-white text-center underline font-extrabold pb-4 md:pb-6 text-shadow-sm">Mad Libbing</h1>
 
         <div className='pt-8 pb-16'>
           <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
 
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4'>Please enter a place:</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4'>Please enter a place:</h1>
+            <input type="text" onChange={(e) => setFieldOne(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter place here" required />
             
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a living creature (Fiction / Non-Fiction):</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a living creature (Fiction / Non-Fiction):</h1>
+            <input type="text" onChange={(e) => setFieldTwo(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter creature's name here" required />
 
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter living creature's pronouns (He, She, They):</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter living creature's pronouns (He, She, They):</h1>
+            <input type="text" onChange={(e) => setFieldThree(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter creature's pronouns here" required />
 
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter an adjective:</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter an adjective:</h1>
+            <input type="text" onChange={(e) => setFieldFour(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter adjective here" required />
 
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a verb (Ends with a 's'):</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a verb (Ends with a 's'):</h1>
+            <input type="text" onChange={(e) => setFieldFive(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter verb here" required />
 
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter an adverb:</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter an adverb:</h1>
+            <input type="text" onChange={(e) => setFieldSix(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter adverb here" required />
 
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a noun (Thing):</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a noun (Thing):</h1>
+            <input type="text" onChange={(e) => setFieldSeven(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter noun here" required />
 
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a verb (Ends with a 'ed'):</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a verb (Ends with a 'ed'):</h1>
+            <input type="text" onChange={(e) => setFieldEight(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter verb here" required />
 
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a noun (Theme / Season):</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter a noun (Theme / Season):</h1>
+            <input type="text" onChange={(e) => setFieldNine(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter noun here" required />
 
-            <h1 className='text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter how the ending plays out (Story is up to User Interpretation):</h1>
-            <input type="text" id="addNumberOne" className="rounded-lg text-black w-full" placeholder="Enter number here" required />
+            <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter how the ending plays out (Story is up to User Interpretation):</h1>
+            <input type="text" onChange={(e) => setFieldTen(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter custom ending here" required />
 
-            <p className='text-3xl text-white text-left font-semibold pt-4'>Response:</p>
-            <div className='flex justify-end'><button className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Add</button></div>
+            <p className='text-1xl sm:text-3xl text-white text-left font-semibold pt-4'>Response: {result}</p>
+            <div className='flex justify-end'><button onClick={() => getResult()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
           </div>
         </div>
 

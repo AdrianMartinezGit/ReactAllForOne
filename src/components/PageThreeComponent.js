@@ -27,21 +27,21 @@ export default function PageThreeComponent() {
 
   return (
     <div className='parallax-container-three'>
-      <main className='p-8 m-0 w-full sm:p-9 md:py-16 md:px-64'>
+      <main className='p-8 m-0 w-full sm:p-9 md:py-16 md:px-18 lg:px-32 xl:px-64'>
         <h1 className="text-4xl md:text-6xl text-white text-center underline font-extrabold pb-4 md:pb-6 text-shadow-sm">Asking Questions</h1>
 
         <div className='grid grid-rows-2 gap-16 pt-8 pb-8'>
           <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
-            <h1 className='text-5xl text-white text-left font-extrabold pb-4'>Question #1:</h1>
-            <input type="text" id="addNumberOne" onChange={(e) => setQuestionOne(e.target.value)} className="rounded-lg text-black w-full" placeholder="Enter your name here" required/>
+            <h1 className='text-3xl sm:text-5xl text-white text-left font-extrabold pb-4'>Question #1:</h1>
+            <input type="text"  onChange={(e) => setQuestionOne(e.target.value)} className="rounded-lg text-black w-full" placeholder="Enter your name here" required/>
             <p className='text-3xl text-white text-left font-semibold pt-4'>Response: {resultOne}</p>
             <div className='flex justify-end'><button onClick={() => getResultOne()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
           </div>
 
           <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
-            <h1 className='text-5xl text-white text-left font-extrabold pb-4'>Question #2:</h1>
-            <input type="text" id="addNumberOne" onChange={(e) => setQuestionTwo(e.target.value)} className="rounded-lg text-black w-full" placeholder="Enter the time you woke up at" required/>
-            <p className='text-3xl text-white text-left font-semibold pt-4'>Response: {resultTwo}</p>
+            <h1 className='text-3xl sm:text-5xl text-white text-left font-extrabold pb-4'>Question #2:</h1>
+            <input type="text"  onChange={(e) => setQuestionTwo(e.target.value)} className="rounded-lg text-black w-full" placeholder="Enter the time you woke up at" required/>
+            <p className='text-1xl sm:text-3xl text-white text-left font-semibold pt-4'>Response: {resultTwo}</p>
             <div className='flex justify-end'><button onClick={() => getResultTwo()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
           </div>
         </div>

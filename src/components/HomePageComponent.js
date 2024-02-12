@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom'
 export default function HomePageComponent() {
   return (
     <div className='parallax-container-home'>
-      <main className='p-8 m-0 w-full sm:p-9 md:p-16'>
+      <main className='p-8 m-0 w-full sm:p-9 md:py-16 md:px-18 lg:px-32 xl:px-64'>
         <h1 className="text-4xl md:text-6xl text-white text-center underline font-extrabold pb-4 md:pb-6">All 4 One - Rubik's Cube Themed!</h1>
 
         <div className="flex items-center justify-center pt-6 pb-12">
