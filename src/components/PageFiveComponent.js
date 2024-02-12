@@ -64,8 +64,8 @@ export default function PageFiveComponent() {
             <h1 className='text-2xl sm:text-4xl text-white text-left font-extrabold pb-4 pt-8'>Please enter how the ending plays out (Story is up to User Interpretation):</h1>
             <input type="text" onChange={(e) => setFieldTen(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter custom ending here" required />
 
-            <p className='text-1xl sm:text-3xl text-white text-left font-semibold pt-4'>Response: {result}</p>
-            <div className='flex justify-end'><button onClick={() => getResult()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
+            <p className='text-1xl sm:text-3xl text-white text-left font-semibold pt-4 pb-6'>Response: {result}</p>
+            <div className='flex justify-end'><button onClick={() => getResult()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded text-3xl w-48 h-20">Submit</button></div>
           </div>
         </div>
 

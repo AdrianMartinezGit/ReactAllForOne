@@ -26,8 +26,8 @@ export default function PageElevenComponent() {
           <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
             <h1 className='text-3xl sm:text-5xl text-white text-left font-extrabold pb-4'>Enter your name:</h1>
             <input type="text" onChange={(e) => setInputField(e.target.value)}  className="rounded-lg text-black w-full" placeholder="Enter name here" required />
-            <p className='text-1xl sm:text-3xl text-white text-left font-semibold pt-4'>Response: {result}</p>
-            <div className='flex justify-end'><button onClick={() => getResult()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
+            <p className='text-1xl sm:text-3xl text-white text-left font-semibold pt-4 pb-6'>Response: {result}</p>
+            <div className='flex justify-end'><button onClick={() => getResult()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded text-3xl w-48 h-20">Submit</button></div>
           </div>
         </div>
 

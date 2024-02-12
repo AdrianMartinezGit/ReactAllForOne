@@ -34,15 +34,15 @@ export default function PageThreeComponent() {
           <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
             <h1 className='text-3xl sm:text-5xl text-white text-left font-extrabold pb-4'>Question #1:</h1>
             <input type="text"  onChange={(e) => setQuestionOne(e.target.value)} className="rounded-lg text-black w-full" placeholder="Enter your name here" required/>
-            <p className='text-3xl text-white text-left font-semibold pt-4'>Response: {resultOne}</p>
+            <p className='text-3xl text-white text-left font-semibold pt-4 pb-6'>Response: {resultOne}</p>
             <div className='flex justify-end'><button onClick={() => getResultOne()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
           </div>
 
           <div className='section-class w-full h-full px-4 md:px-12 py-6 rounded-lg'>
             <h1 className='text-3xl sm:text-5xl text-white text-left font-extrabold pb-4'>Question #2:</h1>
             <input type="text"  onChange={(e) => setQuestionTwo(e.target.value)} className="rounded-lg text-black w-full" placeholder="Enter the time you woke up at" required/>
-            <p className='text-1xl sm:text-3xl text-white text-left font-semibold pt-4'>Response: {resultTwo}</p>
-            <div className='flex justify-end'><button onClick={() => getResultTwo()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded">Submit</button></div>
+            <p className='text-1xl sm:text-3xl text-white text-left font-semibold pt-4 pb-6'>Response: {resultTwo}</p>
+            <div className='flex justify-end'><button onClick={() => getResultTwo()} className="bg-white hover:bg-blue-700 text-black hover:text-white font-semibold py-2 px-4 rounded text-3xl w-48 h-20">Submit</button></div>
           </div>
         </div>
 
